@@ -1,1 +1,31 @@
+//*Largest Element In array*//
 
+class Solution {
+    public static int largest(int n, int[] arr) {
+         int largest=arr[0];
+       for(int i=0;i<arr.length;i++){
+            if(arr[i]>largest){
+                largest=arr[i];
+          }
+       }
+        return largest;
+    }
+    
+ }
+//*Second Largest element in array*//
+
+class Solution {
+    public int print2largest(List<Integer> arr) {
+        int max = -1;
+        int smax = -1;
+        for(int i=0; i<arr.size(); i++){
+            if(arr.get(i) > max){
+                smax = max;
+                max = arr.get(i);
+            }else if(arr.get(i) < max && arr.get(i) > smax){
+                smax = arr.get(i);
+            }
+        }
+        return smax;
+    }
+}
