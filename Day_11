@@ -29,3 +29,51 @@ class Solution {
      return Strb.toString().trim();
     }
 }
+
+******************************************1021. Remove Outermost Parentheses**************************************
+ 
+
+***************Example 1:
+
+Input: s = "(()())(())"
+Output: "()()()"
+Explanation: 
+The input string is "(()())(())", with primitive decomposition "(()())" + "(())".
+After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
+Example 2:
+
+Input: s = "(()())(())(()(()))"
+Output: "()()()()(())"
+Explanation: 
+The input string is "(()())(())(()(()))", with primitive decomposition "(()())" + "(())" + "(()(()))".
+After removing outer parentheses of each part, this is "()()" + "()" + "()(())" = "()()()()(())".*******
+
+
+*********************************************************************Solution**********************************************************
+class Solution {
+    public String removeOuterParentheses(String s) {
+         int count=0;
+         String ans ="";
+         boolean Flag =true;
+     for(int i=0;i<s.length();i++){
+         if(s.charAt(i)=='('){
+            count++;
+         
+          if(count>=2){
+            ans+="(";
+         }
+         }
+        else{
+        count--;
+        if(count>=1){
+         ans+=")";
+           }    
+        
+          }
+        
+      }
+     return ans;
+
+        
+    }
+}
