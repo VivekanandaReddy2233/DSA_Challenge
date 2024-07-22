@@ -1,1 +1,88 @@
 
+********************************************************125. Valid Palindrome********************************************************************
+
+
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+ 
+
+Example 1:
+
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+Example 2:
+
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+Example 3:
+
+Input: s = " "
+Output: true
+Explanation: s is an empty string "" after removing non-alphanumeric characters.
+Since an empty string reads the same forward and backward, it is a palindrome.
+*******************************************************************************Solution*******************************************************************************
+class Solution {
+    public boolean isPalindrome(String s) {
+         s= s.toLowerCase().replaceAll("[^A-Za-z0-9]","");
+         
+       int i=0;
+       int j=s.length()-1;
+       while(i<=j){
+            if(s.charAt(i)!=s.charAt(j)){ 
+             return false;    
+            }
+             i++;
+             j--;
+        }
+       
+       return true;
+    }
+}
+
+****************************************************************************268. Missing Number****************************************************************8
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
+ 
+
+Example 1:
+
+Input: nums = [3,0,1]
+Output: 2
+Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
+Example 2:
+
+Input: nums = [0,1]
+Output: 2
+Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.
+Example 3:
+
+Input: nums = [9,6,4,2,3,5,7,0,1]
+Output: 8
+Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
+
+
+********************************************************************************Solution**************************************************************************
+
+
+class Solution {
+    public boolean isPalindrome(String s) {
+         s= s.toLowerCase().replaceAll("[^A-Za-z0-9]","");
+         
+       int i=0;
+       int j=s.length()-1;
+       while(i<=j){
+            if(s.charAt(i)!=s.charAt(j)){ 
+             return false;    
+            }
+             i++;
+             j--;
+        }
+       
+       return true;
+    }
+}
+
