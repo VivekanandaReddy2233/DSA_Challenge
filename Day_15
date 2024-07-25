@@ -1,1 +1,110 @@
+**********************14. Longest Common Prefix*****************************************
+******Example 1:
+
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+Example 2:
+
+Input: strs = ["dog","racecar","car"]
+Output: ""
+Explanation: There is no common prefix among the input strings.*************************
+
+******************************Solution*********************************
+*class Solution {
+    public String longestCommonPrefix(String[] strs) {
+      Arrays.sort(strs);
+      String str1=strs[0];
+      String str2=strs[strs.length-1];
+      int index=0;
+      while(index<str1.length())
+      {
+          if(str1.charAt(index)==str2.charAt(index))
+          {
+             index++;
+            }
+             else
+             {
+               break;
+            }
+        }
+      return index==0?"":str1.substring(0,index);
+    }
+}
+ **********************************************************1903. Largest Odd Number in String*************************************************8
+Example 1:
+
+Input: num = "52"
+Output: "5"
+Explanation: The only non-empty substrings are "5", "2", and "52". "5" is the only odd number.
+Example 2:
+
+Input: num = "4206"
+Output: ""
+Explanation: There are no odd numbers in "4206".
+Example 3:
+
+Input: num = "35427"
+Output: "35427"
+Explanation: "35427" is already an odd number.
+
+*****************************************************************8Solution*****************************************************
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+      Arrays.sort(strs);
+      String str1=strs[0];
+      String str2=strs[strs.length-1];
+      int index=0;
+      while(index<str1.length())
+      {
+          if(str1.charAt(index)==str2.charAt(index))
+          {
+             index++;
+            }
+             else
+             {
+               break;
+            }
+        }
+      return index==0?"":str1.substring(0,index);
+    }
+}
+***********************************************************242. Valid Anagram**********************************************************
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+ ****************************************************************Solution******************************************************
+class Solution {
+    public boolean isAnagram(String s, String t) {
+       int var1=s.length();
+       int var2=t.length();
+       if(var1!=var2){
+        return false;
+       }
+       else{
+
+         int count[]=new  int[26];
+
+        for(int i=0;i<var1;i++){
+        count[s.charAt(i)-'a']++;
+        }
+        for(int j=0;j<var2;j++){
+            count[t.charAt(j)-'a']--;
+    
+        }
+        for(int i=0;i<count.length;i++){
+          if(count[i]!=0){
+            return false;
+          }
+        }
+          
+       }
+
+    return true;
+    }
+}
 
