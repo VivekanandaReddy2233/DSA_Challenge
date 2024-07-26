@@ -1,1 +1,49 @@
+********************************************************796. Rotate String***********************************
+
+Example 1:
+
+Input: s = "abcde", goal = "cdeab"
+Output: true
+Example 2:
+
+Input: s = "abcde", goal = "abced"
+Output: false
+
+
+*************************************************solution*************************
+    class Solution {
+        public boolean rotateString(String s, String goal) {
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)==goal.charAt(0)){
+                if((s.substring(i)+s.substring(0,i)).equals(goal)){
+                    return true;
+                }
+            }
+        }  
+        return false; 
+        }
+    }
+
+****************************************************************237. Delete Node in a Linked List*************************************************************
+Input: head = [4,5,1,9], node = 5
+Output: [4,1,9]
+Explanation: You are given the second node with value 5, the linked list should become 4 -> 1 -> 9 after calling your function.
+
+*******************************************************************Solution***************************************************************************************
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public void deleteNode(ListNode node) {
+      node.val= node.next.val;
+      node.next = node.next.next;  
+    }
+}
+
 
