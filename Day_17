@@ -1,1 +1,24 @@
+*************************************876. Middle of the Linked List**********************************************
+****************Solution****************
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode middleNode(ListNode head) {
+    ListNode fas_node=head;
+    ListNode slw_node=head;
+     while(fas_node!=null && fas_node.next!=null){
+        slw_node= slw_node.next;
+        fas_node=fas_node.next.next;
+     }
+     return slw_node;
+    }
+}
 
