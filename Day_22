@@ -1,1 +1,34 @@
+*************************************************61. Rotate List*******************************************************
 
+*********************************************************Solution***************************************************************************
+
+// 
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || k == 0) return head;
+
+       
+        ListNode temp = head;
+        int n = 1;
+        while (temp.next != null) {
+            temp = temp.next;
+            n++;
+        }
+        
+        temp.next = head;
+
+         k = k % n;
+         int jump = n - k;
+        
+          temp = head;
+         for (int i = 1; i < jump; i++) {
+            temp = temp.next;
+        }
+
+       
+        ListNode newHead = temp.next;
+        temp.next = null;
+
+        return newHead;
+    }
+}
