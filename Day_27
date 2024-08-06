@@ -1,1 +1,25 @@
+********************************************************Doubly linked list Insertion at given position*****************GFG******************************
+
+**********************************************************************Solution**********************************************
+class GfG
+{
+    //Function to insert a new node at given position in doubly linked list.
+    void addNode(Node head_ref, int pos, int data)
+{
+// Your code here
+int length=1;
+Node newNode=new Node(data);
+Node temp =head_ref;
+while(temp!=null)
+{  
+    if(length==pos+1){
+        newNode.prev=temp;
+        newNode.next=temp.next;
+        temp.next=newNode;
+    }
+    length++;
+    temp=temp.next;
+}
+}
+};
 
