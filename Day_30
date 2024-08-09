@@ -1,1 +1,25 @@
+***************************************************************Reverse a Doubly Linked List*************************************************************************
+
+
+******************************************************************************Solution**********************************************************************************8
+
+public static Node reverseDLL(Node head) {
+    Node currt = head;
+    Node last = null;
+
+  
+    while (currt != null) {
+        last = currt.prev;
+        currt.prev = currt.next;
+        currt.next = last;
+        currt = currt.prev; 
+    }
+
+   
+    if (last != null) {
+        head = last.prev;
+    }
+
+    return head;
+}
 
