@@ -1,1 +1,29 @@
 
+**********************************************Remove duplicates from a sorted doubly linked list****************************************************
+
+
+ ***********************************************Solution************************************************************************************
+class Solution{
+    Node removeDuplicates(Node head){
+       
+         Node back=null;
+         Node temp=head;
+         while(temp.next!=null)
+         {
+             
+         if(temp.data==temp.next.data)
+         {
+            
+             temp.next=temp.next.next;
+         }
+         else
+         {
+              back=temp;
+              temp=temp.next;
+              temp.prev=back;
+              }
+         }
+             
+         return head;
+    }
+}
