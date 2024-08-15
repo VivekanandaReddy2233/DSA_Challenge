@@ -20,3 +20,18 @@ class Solution {
         return count;
     }
 }
+
+******************************************************************K-th Bit is Set or Not**************************************************************
+
+********************************************************Solution**********************************************
+
+class CheckBit {
+    // Function to check if Kth bit is set or not.
+    static boolean checkKthBit(int n, int k) {
+      
+      if((n &(1<<k))!=0){
+          return true;
+      }
+       return false;
+    }
+}
