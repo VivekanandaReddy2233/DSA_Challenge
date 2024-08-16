@@ -1,1 +1,50 @@
+************************************************Swap two numbers*********************************************************************
+
+*************************************Solution*******************************
+class Solution {
+    static List<Integer> get(int a, int b) {
+       
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+
+       
+        List<Integer> list = new ArrayList<>();
+        list.add(a);
+        list.add(b);
+
+        return list;
+    }
+}
+***********************************************************************************Count total set bits***********************************************************************
+
+**************************************************************************Solution******************************************************
+
+class Solution{
+    
+    //Function to return sum of count of set bits in the integers from 1 to n.
+    public static int countSetBits(int n){
+    
+     int cunt=0;
+      
+     while(n<1){
+         
+         if(n%2==1)
+         {
+             cunt++;
+             n=n>>1;
+         }
+     }
+     
+         if(n==1){
+             
+             cunt++; 
+           }
+     
+       
+        return cunt;
+    }
+}
+
+
 
