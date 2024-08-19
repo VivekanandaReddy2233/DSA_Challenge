@@ -1,1 +1,87 @@
+********************************************************************************Implement Queue using Linked List********************************************************************
+
+
+**********************************************************************Solution****************************************************
+class MyQueue
+{
+    QueueNode front, rear;
+    
+  
+    
+	void push(int a)
+	{
+	     QueueNode newNode = new  QueueNode(a);
+       if(front==null && rear==null){
+           front=newNode;
+           rear=newNode;
+       }
+       else{
+           rear.next=newNode;
+           newNode=rear;
+       }
+	}
+	
+    
+	int pop()
+	{
+	    if (front == null) return -1;  
+
+        int val = front.data;  
+        front = front.next;  
+
+        if (front == null) { 
+            rear = null;
+        }
+
+        return val;
+	}
+}
+
+
+*******************************************************************************************Implement Stack using Linked List*******************************************************************
+
+
+***********************************************************Solution****************************************************************
+class MyStack {
+    // class StackNode {
+    //     int data;
+    //     StackNode next;
+    //     StackNode(int a) {
+    //         data = a;
+    //         next = null;
+    //     }
+    // }
+    StackNode top;
+
+    // Function to push an integer into the stack.
+    void push(int a) {
+          
+           StackNode newNode = new  StackNode(a);
+          
+      if(top==null){
+          top=newNode;
+      } 
+      else{
+          newNode.next=top;
+          top=newNode;
+          
+      }
+       
+       
+    }
+
+    
+    int pop() {
+        
+        if(top==null) return -1;
+        
+     StackNode temp=top;
+        
+        top=top.next;
+        
+         return temp.data;
+    }
+}
+
+
 
