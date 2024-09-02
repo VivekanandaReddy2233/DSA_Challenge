@@ -1,1 +1,78 @@
+*********************************************************************1480. Running Sum of 1d Array*******************************************************
 
+*********************************************************************Solution***************************************************************************
+class Solution {
+    public int[] runningSum(int[] nums) {
+
+       for(int i=1;i<nums.length;i++){
+        nums[i]=nums[i-1]+nums[i];
+       }
+     return nums;
+    }
+}
+*******************************************************************************1672. Richest Customer Wealth***************************************************************************
+
+***********************************************************Solution**************************************************************************************
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int res=0;
+       for(int i=0;i<accounts.length;i++){
+         int temp=0;
+        for(int j=0;j<accounts[i].length;j++){
+           temp+=accounts[i][j];
+        }
+        res=Math.max(res,temp);
+       } 
+       return res;
+    }
+}
+**************************************************************************************A. Bit++********************************************
+*****************************************************Solution**********************************************************
+import java.util.Scanner;
+ 
+public class ABit {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.nextLine();  // Consume the remaining newline
+        int X = 0;
+ 
+        for (int i = 0; i < n; i++) {
+            String s = sc.nextLine();  // Read the next command
+ 
+            if (s.equals("++X") || s.equals("X++")) {
+                X++;
+            } else if (s.equals("--X") || s.equals("X--")) {
+                X--;
+            }
+        }
+        
+        System.out.println(X);
+    }
+}
+****************************************************************************************A. Team*****************************************************************************
+*************************************************Solution******************************************
+import java.util.Scanner;
+ 
+public class ATeam {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int prblm = sc.nextInt();
+        int count = 0;  // Initialize count outside the loop
+ 
+        for (int i = 0; i < prblm; i++) {
+            int P = sc.nextInt();
+            int V = sc.nextInt();
+            int T = sc.nextInt();
+            
+            // Check if the problem is solved
+            if (P + V + T >= 2) {
+                count++;  // Increment count for each solved problem
+            }
+        }
+        
+        // Print the total number of solved problems
+        System.out.println(count);
+    }
+}
