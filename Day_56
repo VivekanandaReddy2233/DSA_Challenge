@@ -1,1 +1,78 @@
+/////////A. Word Capitalization//////
+import java.util.Scanner;
+public class WordCaptalization {
+ public static void main(String[] args) {
+    
+  Scanner sc=new Scanner(System.in);
+
+   String str=sc.nextLine();
+ 
+   String WrdCp=Character.toUpperCase(str.charAt(0))+str.substring(1);
+   System.out.println(WrdCp);
+ }   
+}
+
+
+
+///////////////////1365. How Many Numbers Are Smaller Than the Current Number///
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+   
+    int []ans=new int[nums.length];
+
+      
+      for(int i =0;i<nums.length;i++)
+      {
+        int count = 0;
+        for(int j=0;j<nums.length;j++)
+         {
+            if(nums[i]>nums[j])
+            {
+                count++;
+              
+            }
+        }
+        ans[i]=count;
+      }   
+     return ans;
+    }
+}
+
+////////////////////////////////1389. Create Target Array in the Given Order//////////////////////
+class Solution {
+    public int[] createTargetArray(int[] nums, int[] index) {
+          
+     int []target=new int[nums.length];
+
+     for(int i=0;i<nums.length;i++){
+        
+
+        if(index[i] == i) target[index[i]] = nums[i];
+
+        else {
+            for(int j = index[i]; j < i + 1; j++) {
+                int temp = target[j];
+                target[j] = nums[i];
+                nums[i] = temp;
+            }
+        }
+    }
+    return target;
+   }  
+}
+
+//////////////////////1832. Check if the Sentence Is Pangram////////////////////////
+ class Solution {
+     public boolean checkIfPangram(String sentence) {
+        Set set = new HashSet<>();
+
+       for(int i=0;i<sentence.length();i++)
+       {
+        set.add(sentence.charAt(i));
+       }
+      return set.size() == 26;
+       }
+     }
+ 
+
 
