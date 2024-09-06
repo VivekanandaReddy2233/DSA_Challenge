@@ -1,0 +1,25 @@
+///////////////A. Word///////////
+import java.util.Scanner;
+ 
+public class AWord {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();  
+        int lCnt = 0, uCnt = 0;  // 
+        
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isLowerCase(str.charAt(i))) {
+                lCnt++;
+            } else if (Character.isUpperCase(str.charAt(i))) {
+                uCnt++;
+            }
+        }
+ 
+       
+        if (uCnt > lCnt) {
+            System.out.println(str.toUpperCase());  
+        } else {
+            System.out.println(str.toLowerCase());  
+        }
+    }
+}
