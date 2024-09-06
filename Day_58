@@ -44,3 +44,24 @@ public class AWrongSubtraction {
     System.out.println(n);
   }  
 }
+
+////////////////////////1572. Matrix Diagonal Sum//////////////////////////
+
+class Solution {
+    public int diagonalSum(int[][] mat) {
+        
+     int n=mat.length;
+
+     int count =0;
+     for(int i=0;i<n;i++){
+        count+=mat[i][i];
+        count+=mat[i][n-1-i];
+     }  
+     if(n%2==1){
+        int cntr=n/2;
+        count-=mat[cntr][cntr];
+     }
+
+      return count;
+    }
+}
