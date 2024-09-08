@@ -1,1 +1,74 @@
+////////A. Translation///////   https://codeforces.com/problemset/problem/41/A
+import java.util.Scanner;
+
+public class ATranslation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+
+        boolean isReverse = true;
+
+        if (s1.length() != s2.length()) {
+            isReverse = false;
+        } else {
+            for (int i = 0, j = s2.length() - 1; i < s1.length(); i++, j--) {
+                if (s1.charAt(i) != s2.charAt(j)) {
+                    isReverse = false;
+                    break;
+                }
+            }
+        }
+
+        
+        if (isReverse) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+
+        sc.close();
+    }
+}
+/////////////1295. Find Numbers with Even Number of Digits//////////  https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+class Solution {
+    public int findNumbers(int[] nums) {
+
+     int count=0;
+     int n=nums.length;
+     int arr[]=new int[nums.length];
+     for(int i=0;i<n;i++){
+
+       arr[i]=String.valueOf(nums[i]).length();
+       if(arr[i]%2==0){
+        count++;
+       }
+     }
+
+   return count;
+    }
+}
+//////////////832. Flipping an Image//////   https://leetcode.com/problems/flipping-an-image/description/
+class Solution {
+    public int[][] flipAndInvertImage(int[][] image) {
+
+        
+        int row = image.length;
+        int col = image[0].length; 
+        
+        
+        int result[][] = new int[row][col]; 
+        
+        for (int i = 0; i < row; i++) {
+            
+            for (int j = 0; j < col; j++) {
+                
+                result[i][j] = image[i][col - 1 - j] ^ 1;
+            }
+        }
+        return result;
+    }
+}
+
 
