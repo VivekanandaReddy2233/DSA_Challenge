@@ -1,0 +1,31 @@
+/////A. Tram////////   https://codeforces.com/problemset/problem/116/A
+import java.util.Scanner;
+ 
+public class ATram {
+    public static void main(String[] args) {
+ 
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();  
+        int curnt = 0;         
+        int max_capcity = 0;   
+ 
+        
+        for (int i = 0; i < n; i++) {
+            int exit = sc.nextInt();   
+            int enter = sc.nextInt();  
+ 
+            curnt -= exit;             
+            curnt += enter;           
+ 
+           
+            if (curnt > max_capcity) {
+                max_capcity = curnt;
+            }
+        }
+ 
+        System.out.println(max_capcity);  
+    }
+}
+
+
