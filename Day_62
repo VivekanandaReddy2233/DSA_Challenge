@@ -1,1 +1,33 @@
+///////////////A. Beautiful Year////////////////
 
+https://codeforces.com/problemset/problem/271/A
+
+//////////////Solution/////////////////////////////
+import java.util.Scanner;
+public class BeautifulYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int year = sc.nextInt();
+ 
+        while (true) {
+            year++;
+            if (hasDistinctDigits(year)) {
+                System.out.println(year);
+                break;
+            }
+        }
+    }
+ 
+    private static boolean hasDistinctDigits(int year) {
+        String yearStr = Integer.toString(year);
+        for (int i = 0; i < yearStr.length(); i++) {
+            for (int j = i + 1; j < yearStr.length(); j++) {
+                if (yearStr.charAt(i) == yearStr.charAt(j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
