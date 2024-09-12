@@ -62,3 +62,29 @@ class Solution {
         return result;
     }
 }
+/////A. Magnets////  https://codeforces.com/problemset/problem/344/A
+
+import java.util.Scanner;
+ 
+public class Magnets {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner sc = new Scanner(System.in);
+ 
+        int n = sc.nextInt();
+        sc.nextLine(); 
+        int count = 1;
+        String prev = sc.nextLine(); 
+ 
+        for (int i = 1; i < n; i++) { 
+            String curnt = sc.nextLine(); 
+            if (!curnt.equals(prev)) {
+                count++; 
+                
+            }
+            prev = curnt; 
+        }
+        System.out.println(count);
+    }
+}
