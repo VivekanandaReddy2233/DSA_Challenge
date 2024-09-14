@@ -1,0 +1,24 @@
+/////A. Divisibility Problem/////   //// https://codeforces.com/problemset/problem/1328/A //
+
+import java.util.Scanner;
+public class DivisibilityProblem {
+    public static void main(String[] args) {
+        
+        Scanner sc= new Scanner(System.in);
+ 
+        int t=sc.nextInt();
+        while(t-- > 0){
+            long a=sc.nextLong();
+            long b=sc.nextLong();
+             
+            long remin=a%b;
+            if( remin==0){
+                System.out.println(0);
+            }
+            else{
+                long rslt= b-remin;
+                System.out.println(rslt);
+            }
+        }
+    }
+}
