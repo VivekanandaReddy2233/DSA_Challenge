@@ -34,3 +34,94 @@ public class Anton {
          System.out.println(totalFaces);
     }
 }
+
+////A. Games////  https://codeforces.com/problemset/problem/268/A
+
+import java.util.Scanner;
+public class Games {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+
+        int []hmclr=new int[n];
+        int []gustclr=new int[n];
+
+        for(int i=0;i<n;i++){
+            hmclr[i]=sc.nextInt();
+            gustclr[i]=sc.nextInt();
+        }
+         int count=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(hmclr[i]==gustclr[j]){
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+    }
+}
+/////A. Candies and Two Sisters////   https://codeforces.com/problemset/problem/1335/A
+import java.util.Scanner;
+ 
+public class CandiesandTwoSisters {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+      
+        int t=sc.nextInt();
+ 
+        for(int i=0;i<t;i++){
+            int n= sc.nextInt();
+ 
+            if(n<=2){
+                System.out.println(0);
+            }
+            else
+            {
+                System.out.println((n-1)/2);
+            }
+        }
+    }
+}
+
+////167. Two Sum II - Input Array Is Sorted////  https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+    
+      int arr[]=new int [2];
+     
+      int start =0;
+      int end=numbers.length-1;
+      int k=0;
+      while(start<end){
+        int total=numbers[start]+numbers[end];
+
+        if(total==target){
+            arr[k]=start+1;
+            arr[k+1]=end+1;
+        }
+
+        if(total>target){
+            end--;
+        }
+        else{
+            start++;
+        }
+      }
+    return arr;
+    }
+}
+////441. Arranging Coins///  https://leetcode.com/problems/arranging-coins/description/
+
+class Solution {
+    public int arrangeCoins(int n) { 
+       int i=0;
+     while(n > 0 && n > i){
+        i++;
+        n=n-i;
+     }  
+      return i;
+    }
+}
+
