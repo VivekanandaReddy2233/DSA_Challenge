@@ -53,6 +53,46 @@ class Solution {
                 start = mid + 2;
             }
         }
+
+///A. Soft Drinking//  https://codeforces.com/problemset/problem/151/A
+
+import java.util.Scanner;
+public class SoftDrinking {
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        int l=sc.nextInt();
+        int c=sc.nextInt();
+        int d=sc.nextInt();
+        int p=sc.nextInt();
+        int nl=sc.nextInt();
+        int np=sc.nextInt();
+     
+        
+        int totaldrnk=k*l;
+        int totallimeslice=c*d;
+         
+        int drinkml=totaldrnk/nl;
+        int drinkbylim=totallimeslice;
+        int drinksbyslt=p/np;
+
+        int totaldrinks;
+
+        if (drinkml <= drinkbylim && drinkml <= drinksbyslt) {
+            totaldrinks = drinkml;
+        } else if (drinkbylim <= drinkml && drinkbylim <= drinksbyslt) {
+            totaldrinks = drinkbylim;
+        } else {
+            totaldrinks = drinksbyslt;
+        }
+        totaldrinks= totaldrinks/n;
+       System.out.println(totaldrinks);
+    }
+}
+
         
         return nums[start];
     }
