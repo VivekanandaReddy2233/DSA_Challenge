@@ -27,3 +27,102 @@ public class VasyatheHipster {
             System.out.println(diftdys+" "+sameday);
     }
 }
+///A. Restoring Three Numbers///   https://codeforces.com/problemset/problem/1154/A
+
+import java.util.Scanner;
+public class RestoringThreeNumbers {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int x1=sc.nextInt();
+        int x3=sc.nextInt();
+        int x2=sc.nextInt();
+        int x4=sc.nextInt();
+
+        int aPlusBPlusC = x1;
+        
+        if (x2 > aPlusBPlusC) {
+            aPlusBPlusC = x2;
+        }
+        if (x3 > aPlusBPlusC) {
+            aPlusBPlusC = x3;
+        }
+        if (x4 > aPlusBPlusC) {
+            aPlusBPlusC = x4;
+        }
+        
+        int sum1 = 0, sum2 = 0, sum3 = 0;
+        
+        if (aPlusBPlusC == x1) {
+            sum1 = x2;
+            sum2 = x3;
+            sum3 = x4;
+        } else if (aPlusBPlusC == x2) {
+            sum1 = x1;
+            sum2 = x3;
+            sum3 = x4;
+        } else if (aPlusBPlusC == x3) {
+            sum1 = x1;
+            sum2 = x2;
+            sum3 = x4;
+        } else {
+            sum1 = x1;
+            sum2 = x2;
+            sum3 = x3;
+        }
+        
+        int a = aPlusBPlusC - sum1;  
+        int b = aPlusBPlusC - sum2;  
+        int c = aPlusBPlusC - sum3;  
+        
+        System.out.println(a + " " + b + " " + c);
+        
+    }
+}
+
+A. YES or YES? /// https://codeforces.com/problemset/problem/1703/A
+import java.util.Scanner;
+public class YESorYES {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+       
+       
+        for(int i=0;i<n;i++){
+            String str=sc.nextLine();
+            if(str.toLowerCase().equals("yes")){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+        }
+    }
+}
+162. Find Peak Element ////https://leetcode.com/problems/find-peak-element/
+class Solution {
+    public int findPeakElement(int[] nums) {
+           
+     int start=0;
+     int end=nums.length-1;
+
+      while(start<end){
+
+    
+      int mid=start+(end-start)/2;
+      if(nums[mid]<nums[mid+1]){
+        start=mid+1;
+
+      }
+      else{
+        end=mid;
+      }
+      
+      }
+      return start;
+    }
+}
+
+
+
