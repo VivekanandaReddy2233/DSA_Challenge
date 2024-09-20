@@ -1,0 +1,29 @@
+////A. Vasya the Hipster///  https://codeforces.com/problemset/problem/581/A
+
+import java.util.Scanner;
+public class VasyatheHipster {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+
+        int diftdys;
+        if(a<b){
+            diftdys=a;
+        }
+        else{
+            diftdys=b;
+        }
+
+        int reming;
+        if(a>b){
+            reming=a-b;
+        }
+        else{
+            reming=b-a;
+        }
+        int sameday=reming/2;
+            System.out.println(diftdys+" "+sameday);
+    }
+}
