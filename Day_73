@@ -1,0 +1,43 @@
+A. Again Twenty Five! ////  https://codeforces.com/problemset/problem/630/A
+
+import java.util.Scanner;
+public class AgainTwentyFive {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+     long n=sc.nextLong();
+
+        System.out.println(25);
+    }
+}
+
+
+A. Yet Another Two Integers Problem ///  https://codeforces.com/problemset/problem/1409/A
+
+import java.util.Scanner;
+public class YetAnotherTwoIntegersProblem {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+
+        for(int i=0;i<n;i++){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+
+           int dif;
+
+            if(a>b){
+              dif=a-b;
+            }else{
+                dif=b-a;
+            }
+            
+            int moves=dif/10;
+            if(dif%10!=0){
+                moves+=1;
+            }
+            System.out.println(moves);
+        }
+    }
+}
