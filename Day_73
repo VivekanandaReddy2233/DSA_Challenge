@@ -67,7 +67,7 @@ public class Lucky {
     }
 }
 
-A. Yet Another Two Integers Problem ///
+A. Yet Another Two Integers Problem ///https://codeforces.com/problemset/problem/1409/A
 import java.util.Scanner;
 public class YetAnotherTwoIntegersProblem {
     public static void main(String[] args) {
