@@ -1,0 +1,90 @@
+A. Division? ///  https://codeforces.com/problemset/problem/1669/A
+
+
+import java.util.Scanner;
+public class Division {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++){
+            int rating =sc.nextInt();
+            if (rating >= 1900) {
+                System.out.println("Division 1");
+            } else if (rating >= 1600) {
+                System.out.println("Division 2");
+            } else if (rating >= 1400) {
+                System.out.println("Division 3");
+            } else {
+                System.out.println("Division 4");
+            }
+        }
+    }
+}
+
+1807A - Plus or Minus//     https://codeforces.com/problemset/problem/1807/A
+
+import java.util.Scanner;
+public class PlusorMinus {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+
+       int t=sc.nextInt();
+       for(int i=0;i<t;i++){
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+
+        if( a+b==c){
+            System.out.println("+");
+        }
+        else if(a-b==c){
+            System.out.println("-");
+        }
+       }
+    }
+}
+A. Codeforces Checking///  https://codeforces.com/problemset/problem/1791/A
+
+import java.util.Scanner;
+
+public class CodeforcesChecking {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt();
+        sc.nextLine(); 
+        String codeforces = "codeforces";
+
+        for (int i = 0; i < t; i++) {
+            char c = sc.nextLine().charAt(0); 
+
+            if (codeforces.indexOf(c) != -1) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+}
+754. Reach a Number /// https://leetcode.com/problems/reach-a-number/
+
+class Solution {
+    public int reachNumber(int target) {
+            
+       target = Math.abs(target);
+        int sum = 0;
+        int steps = 0;
+        
+      
+        while (sum < target || (sum - target) % 2 != 0) {
+            steps++;
+            sum += steps;
+        }
+        
+        return steps;     
+ 
+    }
+}
+
