@@ -1,1 +1,83 @@
-A. Dislike of Threes   ///https://codeforces.com/problemset/problem/1560/A
+A. Choosing Teams  ///https://codeforces.com/problemset/problem/432/A
+import java.util.Scanner;
+public class ChoosingTeams {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        int eligible=0;
+ 
+        for(int i=0;i<n;i++){
+            int contest=sc.nextInt();
+            if(contest+k<=5){
+                eligible++;
+            }
+        }
+        int team=eligible/3;
+ 
+        System.out.println(team);
+    }
+}
+A. Team Olympiad //https://codeforces.com/problemset/problem/490/A
+import java.util.ArrayList;
+import java.util.Scanner;
+ 
+public class TeamOlympiad {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  
+ 
+        
+        ArrayList<Integer> program = new ArrayList<>();
+        ArrayList<Integer> math = new ArrayList<>();
+        ArrayList<Integer> pe = new ArrayList<>();
+ 
+        for (int i = 1; i <= n; i++) {  
+            int skill = sc.nextInt();
+            if (skill == 1) {
+                program.add(i);  
+            } else if (skill == 2) {
+                math.add(i); 
+            } else {
+                pe.add(i);  
+            }
+        }
+ 
+        int teams = Math.min(program.size(), Math.min(math.size(), pe.size()));
+        System.out.println(teams);
+ 
+        
+        for (int i = 0; i < teams; i++) {
+            System.out.println(program.get(i) + " " + math.get(i) + " " + pe.get(i));
+        }
+
+    }
+}
+A. Medium Number //https://codeforces.com/problemset/problem/1760/A
+import java.util.Scanner;
+public class MediumNumber {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+ 
+        int t=sc.nextInt();
+ 
+        for(int i=0;i<t;i++){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int c=sc.nextInt();
+ 
+            int median;
+ 
+            if ((a >= b && a <= c) || (a <= b && a >= c)) {
+                median = a; 
+            } else if ((b >= a && b <= c) || (b <= a && b >= c)) {
+                median = b; 
+            } else {
+                median = c; 
+            }
+ 
+            System.out.println(median);
+        }
+    }
+}
