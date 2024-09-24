@@ -52,3 +52,34 @@ public class DieRoll {
         }
     }
 }
+A. Mishka and Game //https://codeforces.com/problemset/problem/703/A
+import java.util.Scanner;
+public class MishkaandGame {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+        int count1 =0;
+        int count2=0;
+        for(int i=0;i<n;i++){
+            int misha=sc.nextInt();
+            int chris=sc.nextInt();
+            if(misha>chris){
+                count1 ++;
+            }
+            if(misha<chris){
+             count2++;
+            }
+        }
+        if(count1>count2){
+            System.out.println("Mishka");
+        }
+        else if(count1==count2){
+            System.out.println("Friendship is magic!^^");
+        }
+        else{
+            System.out.println("Chris");
+        }
+    }
+}
+
