@@ -52,7 +52,8 @@ public class DieRoll {
         }
     }
 }
-A. Mishka and Game //https://codeforces.com/problemset/problem/703/A
+A. Mishka and Game //https://codeforces.com/problemset/problem/703/
+
 import java.util.Scanner;
 public class MishkaandGame {
     public static void main(String[] args) {
@@ -82,4 +83,26 @@ public class MishkaandGame {
         }
     }
 }
+169. Majority Element // https://leetcode.com/problems/majority-element/description/?envType=study-plan-v2&envId=top-interview-150
+class Solution {
+    public int majorityElement(int[] nums) {
+      
+        int count = 0;
+        int candidate = 0;
 
+       
+        for (int i = 0; i < nums.length; i++) {
+            if (count == 0) {
+                candidate = nums[i];  
+            }
+           
+            if (nums[i] == candidate) {
+                count++;  
+            } else {
+                count--;  
+            }
+        }
+
+        return candidate;
+    }
+}
