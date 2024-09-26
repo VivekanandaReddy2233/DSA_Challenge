@@ -33,3 +33,65 @@ public class EvenArray {
         }   
     }
 }
+A. Panoramix's Prediction //  https://codeforces.com/problemset/problem/80/A
+import java.util.Scanner;
+
+public class PanoramixPrediction {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        
+     
+        if (isNextPrime(n, m)) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+        sc.close();
+    }
+
+   
+    public static boolean isNextPrime(int n, int m) {
+        for (int i = n + 1; i <= m; i++) {
+            if (isPrime(i)) {
+                return i == m;
+            }
+        }
+        return false;
+    }
+
+   
+    public static boolean isPrime(int num) {
+        if (num < 2) return false;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
+A. Boring Apartments //https://codeforces.com/problemset/problem/1433/A
+import java.util.Scanner;
+ 
+public class BoringApartments {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt(); 
+ 
+        for (int i = 0; i < t; i++) {
+            int x = scanner.nextInt();  
+            int digit = x % 10;
+            int n = String.valueOf(x).length(); 
+ 
+            
+            int result = (digit - 1) * 10 + (n * (n + 1)) / 2;
+ 
+            
+            System.out.println(result);
+        }
+ 
+        scanner.close();
+    }
+}
+
+
