@@ -94,4 +94,55 @@ public class BoringApartments {
     }
 }
 
+A. Plus One on the Subset /// https://codeforces.com/problemset/problem/1624/A
+
+import java.util.Scanner;
+public class PlusOneOnTheSubset {
+    public void meth(){
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+
+        while (t-- > 0) {
+            
+         int n=sc.nextInt();
+         int arr[]=new int[n];
+         
+         for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+         
+         int max = arr[0], min = arr[0];
+         for (int i = 1; i < n; i++) {
+             if (arr[i] > max) {
+                 max = arr[i];
+             }
+             if (arr[i] < min) {
+                 min = arr[i];
+             }
+     
+           }
+           System.out.println(max - min);
+    }      
+    }
+   
+  
+
+    public static void main(String[] args) {
+        
+        new PlusOneOnTheSubset().meth();
+    }
+}
+
+80. Remove Duplicates from Sorted Array II ///https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/?envType=study-plan-v2&envId=top-interview-150
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int j = 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (j == 1 || nums[i] != nums[j - 2]) {
+                nums[j++] = nums[i];
+            }
+        }
+        return j;
+    }
+}
 
