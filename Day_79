@@ -1,1 +1,92 @@
+A. Do Not Be Distracted! // https://codeforces.com/problemset/problem/1520/A
+import java.util.Scanner;
+ 
+public class DoNotBeDistracted {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+ 
+        int t = sc.nextInt();  
+ 
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt(); 
+            String s = sc.next(); 
+            boolean distracted = false;
+            for (int j = 1; j < n; j++) {
+                
+                if (s.charAt(j) != s.charAt(j - 1) && s.substring(0, j).contains("" + s.charAt(j))) {
+                    distracted = true;
+                    break;
+                }
+            }
+ 
+            
+            if (distracted) {
+                System.out.println("NO");
+            } else {
+                System.out.println("YES");
+            }
+        }
+    }
+}
+A. Square String? /// https://codeforces.com/problemset/problem/1619/A
+import java.util.Scanner;
+
+public class SquareString {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt(); 
+        
+        
+        for (int i = 0; i < t; i++) {
+            String str = sc.next();  
+
+            if (str.length() % 2 == 0) {  
+                int half = str.length() / 2;
+
+               
+                if (str.substring(0, half).equals(str.substring(half))) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+    }
+}
+
+A. Stair, Peak, or Neither? ///https://codeforces.com/problemset/problem/1950/A
+import java.util.Scanner;
+
+public class StairPeakorNeither {
+     public void meth(){
+
+     Scanner sc=new Scanner(System.in);
+
+     int t=sc.nextInt();
+
+     for(int i=0;i<t;i++){
+       int a=sc.nextInt();
+       int b=sc.nextInt();
+       int c=sc.nextInt();
+       
+       if(a<b && b<c){
+            System.out.println("STAIR");
+       }
+       else if ( a<b && b>c) {
+         System.out.println("PEAK");
+       }
+       else{
+        System.out.println("NONE");
+       }
+       
+    }
+}
+    public static void main(String[] args) {
+       new StairPeakorNeither().meth();
+    }
+}
 
