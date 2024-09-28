@@ -1,1 +1,95 @@
+Love Story //// https://codeforces.com/problemset/problem/1829/A
+import java.util.Scanner;
+
+public class LoveStory {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+
+        int t=sc.nextInt();
+        sc.nextLine(); 
+        String str1="codeforces";
+
+        for(int i=0;i<t;i++){
+            String str=sc.nextLine();
+            int count =0;
+            
+            for(int j=0;j<10;j++){
+
+                if (str.charAt(j)!=str1.charAt(j)) {
+                 
+                  count++;  
+                }
+              
+            }
+            System.out.println(count);
+        }
+    }
+}
+A. Spell Check // https://codeforces.com/problemset/problem/1722/A
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SpellCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt(); 
+        sc.nextLine(); 
+
+        String correctSpelling = "Timur"; 
+
+       
+        char[] correctArr = correctSpelling.toCharArray();
+        Arrays.sort(correctArr);
+        
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt(); 
+            sc.nextLine(); 
+
+            String str = sc.nextLine(); 
+            
+            if (n == 5) {
+               
+                char[] inputArr = str.toCharArray();
+                Arrays.sort(inputArr);
+
+                if (Arrays.equals(inputArr, correctArr)) {
+                    System.out.println("YES");
+                } else {
+                    System.out.println("NO");
+                }
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+} 
+A. Vanya and Cubes /// https://codeforces.com/problemset/problem/492/A
+import java.util.Scanner;
+public class VanyaandCubes {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+        
+        int height=0;
+        int totlcub=0;
+        int level=1;
+
+        while (true) {
+            
+            int cubefrlevel= (level*(level+1)/2);
+
+            if(totlcub+cubefrlevel <=n){
+                totlcub +=cubefrlevel;
+                height++;
+                level++;
+            }
+            else{
+                break;
+            }
+        }
+        System.out.println(height);
+    }
+}
 
