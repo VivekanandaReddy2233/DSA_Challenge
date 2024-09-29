@@ -57,4 +57,21 @@ public class ICPCBalloons {
         }
     }
 }
+A. A+B Again? //https://codeforces.com/problemset/problem/1999/A
+import java.util.Scanner;
+
+public class ABAgain {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        for(int i=0;i<t;i++){
+            int n=sc.nextInt();
+
+            int tens=n/10;
+            int ones=n%10;
+
+            System.out.println(tens+ones);
+        }
+    }
+}
 
