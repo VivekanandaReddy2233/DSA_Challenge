@@ -1,1 +1,60 @@
+A. Brain's Photos ///  https://codeforces.com/problemset/problem/707/A
+import java.util.Scanner;
+
+public class BrainsPhotos {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                char pixel=sc.next().charAt(0);
+
+                if (pixel=='C'|| pixel=='M'|| pixel=='Y' ) {
+                    System.out.println("#Color");
+                    return; 
+                }
+            }
+        }
+        System.out.println("#Black&White");
+    }
+}
+B. ICPC Balloons//// https://codeforces.com/problemset/problem/1703/B
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class ICPCBalloons {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int t=sc.nextInt();
+
+        while (t-- >0) {
+            int n=sc.nextInt();
+            
+            String str=sc.next();
+
+            Set<Character> reslt = new HashSet<>();
+
+            int balloons=0;
+
+            for(int i=0;i<n;i++){
+                char prbl=str.charAt(i);
+
+                if(reslt.contains(prbl)){
+                    balloons+=1;
+                }
+                else{
+                    balloons+=2;
+                    reslt.add(prbl);
+                }
+            }
+            System.out.println(balloons);
+            
+        }
+    }
+}
 
