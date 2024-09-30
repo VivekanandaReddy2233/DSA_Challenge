@@ -22,3 +22,23 @@ public class FloorNumber {
     }
 }
 
+A. A+B? // https://codeforces.com/problemset/problem/1772/A
+import java.util.Scanner;
+
+public class AB {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        sc.nextLine();
+
+        for(int i=0;i<t;i++){
+
+            
+            String expression = sc.nextLine();
+            int a = expression.charAt(0) - '0';
+            int b = expression.charAt(2) - '0';  
+            System.out.println(a + b);
+
+        }
+    }
+}
