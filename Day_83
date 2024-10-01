@@ -29,3 +29,30 @@ public class VladandtheBestofFive {
     }
 }
 
+B. Colourblindness/// https://codeforces.com/problemset/problem/1722/B
+import java.util.Scanner;
+
+public class Colourblindness {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t = sc.nextInt(); 
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt(); 
+            
+            String row1 = sc.next(); 
+            String row2 = sc.next(); 
+ 
+           
+            row1 = row1.replace('G', 'B');
+            row2 = row2.replace('G', 'B');
+            
+            if (row1.equals(row2)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+}
+
+
