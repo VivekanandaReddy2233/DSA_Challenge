@@ -1,1 +1,31 @@
+A. Vlad and the Best of Five/// https://codeforces.com/problemset/problem/1926/A
+import java.util.Scanner;
+
+public class VladandtheBestofFive {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int t = sc.nextInt(); 
+        for (int k = 0; k < t; k++) {
+            String str = sc.next(); 
+
+            int countA = 0;
+            int countB = 0;
+
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == 'A') {
+                    countA++;
+                } else if (str.charAt(i) == 'B') {
+                    countB++;
+                }
+            if (countA > countB) {
+                System.out.println("A");
+            } else if (countB > countA) {
+                System.out.println("B");
+            } else {
+                System.out.println("Equal");
+            }
+        }
+    }
+}
 
