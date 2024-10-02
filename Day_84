@@ -1,1 +1,51 @@
+Night at the Museum//https://codeforces.com/problemset/problem/731/A
+import java.util.Scanner;
+ 
+public class NightattheMuseum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+ 
+        int totalRotation = 0;
+        char currentPosition = 'a';
+        
+        
+        for (int i = 0; i < str.length(); i++) {
+            char targetPosition = str.charAt(i);
+            
+           
+            int clockwiseDistance = Math.abs(targetPosition - currentPosition);
+            int counterclockwiseDistance = 26 - clockwiseDistance;
+            
+            totalRotation += Math.min(clockwiseDistance, counterclockwiseDistance);
+            
+            currentPosition = targetPosition;
+        }
+        System.out.println(totalRotation);
+        
+    }
+}
+274. H-Index// https://leetcode.com/problems/h-index/description/?envType=study-plan-v2&envId=top-interview-150
+class Solution {
+    public int hIndex(int[] citations) {
+        int n= citations.length;
+        int bucket[]= new int[n+1]; 
+        for(int i=0; i< n; i++){ 
+            int val= citations[i];
 
+            if(val< n){
+                bucket[val]++;
+            }else{
+                bucket[n]++;    
+            }
+        }
+        int count= 0;
+        for(int i=n; i>=0; i--){ 
+            count+= bucket[i];
+            if(i <= count){
+                return i;
+            }
+        }
+        return 0;
+    }
+}
