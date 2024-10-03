@@ -35,3 +35,33 @@ public class FollowingDirections {
     }
 }
 
+
+C. Word on the Paper/// https://codeforces.com/problemset/problem/1850/C
+
+import java.util.Scanner;
+
+public class WordonthePaper {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        sc.nextLine();  
+        
+        while (t-- > 0) {
+            String wrd = "";
+            
+            for (int i = 0; i < 8; i++) {
+                String line = sc.nextLine();  
+                
+                for (int j = 0; j < 8; j++) {
+                    char ch = line.charAt(j);
+                    if (ch != '.') {
+                        wrd += ch; 
+                    }
+                }
+            }
+            System.out.println(wrd);  
+        }
+        
+        sc.close();
+    }
+}
