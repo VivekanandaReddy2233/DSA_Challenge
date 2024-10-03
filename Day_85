@@ -1,1 +1,37 @@
+Following Directions //// https://codeforces.com/problemset/problem/1791/B
+import java.util.Scanner;
+
+public class FollowingDirections {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();  
+        while (t-- > 0) {
+            int n = scanner.nextInt();  
+            String directions = scanner.next();  
+            int x = 0, y = 0;  
+            
+            for (int i = 0; i < n; i++) {
+                char direction = directions.charAt(i);
+                if (direction == 'L') {
+                    x--;
+                } else if (direction == 'R') {
+                    x++;
+                } else if (direction == 'U') {
+                    y++;
+                } else if (direction == 'D') {
+                    y--;
+                }
+                
+                if (x == 1 && y == 1) {
+                    System.out.println("YES");
+                    break;
+                }
+            }
+            
+            if (x != 1 || y != 1) {
+                System.out.println("NO");
+            }
+        }
+    }
+}
 
