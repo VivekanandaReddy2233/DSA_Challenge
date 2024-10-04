@@ -72,4 +72,32 @@ public class FafandhisCompany {
         System.out.println(ways);
     }
 }
+290. Word Pattern// https://leetcode.com/problems/word-pattern/description/?envType=study-plan-v2&envId=top-interview-150
+class Solution {
+    public boolean wordPattern(String pattern, String s) {
+        Map<Character, String> map = new HashMap<>();
+        String[] str = s.split(" ");
+
+        if (pattern.length() != str.length) return false;
+
+        for (int i = 0; i < str.length; i++) {
+            char ch = pattern.charAt(i);
+
+            if (map.containsKey(ch)) {
+                if (!map.get(ch).equals(str[i])){
+                 
+                  return false;
+                }
+                
+            } 
+            else {
+                if (map.containsValue(str[i])) {
+                 return false;   
+                }
+                map.put(ch, str[i]);
+            }
+        }
+        return true;
+    }
+}
 
