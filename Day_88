@@ -23,3 +23,30 @@ public class Upscaling {
         }
     }
 }
+A. Collecting Coins ///https://codeforces.com/problemset/problem/1294/A
+import java.util.Scanner;
+
+public class CollectingCoins {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+            int c=sc.nextInt();
+            int n=sc.nextInt();
+
+            int max_coin=Math.max(a, Math.max(b,c));
+            int totalRequired = (max_coin - a) + (max_coin - b) + (max_coin - c);
+            if (n >= totalRequired && (n - totalRequired) % 3 == 0){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+
+        }
+    }
+}
