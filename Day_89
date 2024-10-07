@@ -1,0 +1,62 @@
+A. Fair Playoff// https://codeforces.com/problemset/problem/1535/A
+
+import java.util.Scanner;
+
+public class FairPlayoff {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+    
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++){
+            int s1=sc.nextInt();
+            int s2=sc.nextInt();
+            int s3=sc.nextInt();
+            int s4=sc.nextInt();
+
+            int max1;
+            if (s1 > s2) {
+                max1 = s1; 
+            } else {
+                max1 = s2; 
+            }
+            int max2;
+            if(s3 > s4){
+                max2=s3;
+            }
+            else{
+                max2=s4;
+            }
+            int strongest1 = s1;
+            if (s2 > strongest1) {
+                strongest1 = s2;
+            }
+            if (s3 > strongest1) {
+                strongest1 = s3;
+            }
+            if (s4 > strongest1){
+                strongest1 = s4;
+            } 
+            
+            int strongest2 = Integer.MIN_VALUE;
+            if (s1 != strongest1 && s1 > strongest2) {
+                strongest2 = s1;
+            }
+            if (s2 != strongest1 && s2 > strongest2) {
+                strongest2 = s2;
+            }
+            if (s3 != strongest1 && s3 > strongest2){
+                strongest2 = s3;
+            } 
+            if (s4 != strongest1 && s4 > strongest2){
+                strongest2 = s4;
+            } 
+            
+            if ((max1 == strongest1 && max2 == strongest2) || (max1 == strongest2 && max2 == strongest1)) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+}
