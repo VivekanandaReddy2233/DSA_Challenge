@@ -31,4 +31,34 @@ public class ArraywithOddSum {
             }
         }
  }
+A. Favorite Sequence //https://codeforces.com/problemset/problem/1462/A
+import java.util.Scanner;
+
+public class FavoriteSequence {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++){
+            int n=sc.nextInt();
+            int[] arr = new int[n];
+
+            for (int j = 0; j < n; j++) {
+                arr[j] = sc.nextInt();
+            }
+            int left = 0;  
+            int right = n - 1;
+
+            while (left <= right) {
+              
+                System.out.print(arr[left++] + " ");
+                if (left <= right) {
+                    System.out.print(arr[right--] + " ");
+                }
+            }
+            System.out.println();  
+        }
+    }
+}
+
 
