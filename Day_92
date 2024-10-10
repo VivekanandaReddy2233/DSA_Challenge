@@ -1,0 +1,30 @@
+A. Pangram ///  https://codeforces.com/problemset/problem/520/A
+import java.util.Scanner;
+import java.util.HashSet;
+
+public class Pangram {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        sc.nextLine();
+        String str=sc.nextLine();
+        
+        str=str.toLowerCase();
+
+        HashSet<Character> reslt =new HashSet<>();
+
+        for(int i=0;i<n;i++){
+            char curnt=str.charAt(i);
+             
+            if(curnt >= 'a' && curnt <='z'){
+                reslt.add(curnt);
+            }
+        }
+        if(reslt.size()==26){
+            System.out.println("YES");
+        }
+        else{
+            System.out.println("NO");
+        }
+    }
+}
