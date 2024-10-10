@@ -28,3 +28,36 @@ public class Pangram {
         }
     }
 }
+A. Spy Detected! /// https://codeforces.com/problemset/problem/1512/A
+
+import java.util.Scanner;
+
+public class SpyDetected {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+
+        int t=sc.nextInt();
+        for(int i=0;i<t;i++){
+            int n=sc.nextInt();
+             int arr[]=new int[n];
+            for(int j=0;j<n;j++){
+                
+                arr[j]=sc.nextInt();
+            }
+            int spyIndex = -1;
+            
+            if (arr[0] != arr[1] && arr[0] != arr[2]) {
+                spyIndex = 1;
+            } else {
+                for (int j = 1; j < n; j++) {
+                    if (arr[j] != arr[0]) {
+                        spyIndex = j + 1; 
+                        break;
+                    }
+                }
+            }
+            System.out.println(spyIndex);
+        }
+    }
+}
+
