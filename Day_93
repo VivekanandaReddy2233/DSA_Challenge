@@ -22,4 +22,41 @@ public class HolidayOfEquality {
         System.out.println(totalBurles);
     }
 }
+A. Two Vessels//https://codeforces.com/problemset/problem/1872/A
+import java.util.Scanner;
+
+public class TwoVessels {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int t=sc.nextInt();
+        for(int i=0;i<t;i++){
+           int a=sc.nextInt();
+           int b=sc.nextInt();
+           int c=sc.nextInt();
+
+           int dif;
+           if(a>b){
+            dif=a-b;
+           }
+           else{
+            dif=b-a;
+           }
+           if(dif==0){
+            System.out.println(0);
+           }
+           else{
+                int fullMoves = dif / (2 * c);
+                int remainder = dif % (2 * c);
+
+                int moves = fullMoves;
+
+                if (remainder > 0) {
+                    moves++;
+                }
+                System.out.println(moves);
+           }
+        }
+    }
+}
 
