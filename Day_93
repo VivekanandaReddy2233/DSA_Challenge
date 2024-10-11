@@ -60,3 +60,27 @@ public class TwoVessels {
     }
 }
 
+A. Maximum in Table///https://codeforces.com/problemset/problem/509/A
+import java.util.Scanner;
+
+public class MaximuminTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int[][] table = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || j == 0) {
+                    table[i][j] = 1;
+                } else {
+                    table[i][j] = table[i-1][j] + table[i][j-1];
+                }
+            }
+        }
+        System.out.println(table[n-1][n-1]);
+    }
+}
+
+
