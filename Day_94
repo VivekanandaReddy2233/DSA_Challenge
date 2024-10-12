@@ -22,5 +22,36 @@ public class Horseshoe {
         System.out.println(horseshoe);
     }
 }
+B. osu!mania// https://codeforces.com/problemset/problem/2009/B
 
+import java.util.Scanner;
+ 
+public class OsuMania {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();  // Number of test cases
+   
+        for (int test = 0; test < t; test++) {
+            int n = sc.nextInt(); 
+            int[] result = new int[n];  
+            
+          
+            for (int i = 0; i < n; i++) {
+                String row = sc.next();  
+                for (int j = 0; j < 4; j++) {
+                    if (row.charAt(j) == '#') {
+                        result[n - i - 1] = j + 1; 
+                        break;
+                    }
+                }
+            }
+            
+            for (int i = 0; i < n; i++) {
+                System.out.print(result[i] + " ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
 
