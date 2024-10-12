@@ -1,0 +1,24 @@
+A. Is your horseshoe on the other hoof?/// https://codeforces.com/problemset/problem/228/A
+import java.util.Scanner;
+ 
+public class Horseshoe {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int s1=sc.nextInt();
+        int s2=sc.nextInt();
+        int s3=sc.nextInt();
+        int s4=sc.nextInt();
+        int color=4;
+        if(s1==s2 || s1==s3 || s1==s4){
+           color--;
+        }
+        if(s2==s3 || s2==s4){
+            color--;
+        }
+        if(s3==s4){
+            color--;
+        }
+        int horseshoe=4-color;
+        System.out.println(horseshoe);
+    }
+}
