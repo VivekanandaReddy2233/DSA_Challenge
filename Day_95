@@ -25,3 +25,52 @@ public class AC {
         }
     }
 }
+A. Vus the Cossack and a Contest /.//https://codeforces.com/problemset/problem/1186/A
+import java.util.Scanner;
+
+public class VustheCossackandaContest {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();  //participate
+        int m=sc.nextInt();  //pens
+        int k=sc.nextInt();  //notebooks
+
+        if(m >= n && k >= n){
+            System.out.println("YES");
+        }
+        else{
+            System.out.println("NO");
+        }
+    }
+}
+A. X Axis //https://codeforces.com/problemset/problem/1986/A
+import java.util.Scanner;
+
+public class AXAxis {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  
+
+        int t = sc.nextInt();  
+
+        for (int i = 0; i < t; i++) {
+            int x1 = sc.nextInt();  
+            int x2 = sc.nextInt();  
+            int x3 = sc.nextInt();  
+
+            int median;
+            if ((x1 >= x2 && x1 <= x3) || (x1 <= x2 && x1 >= x3)) {
+                median = x1;
+            } else if ((x2 >= x1 && x2 <= x3) || (x2 <= x1 && x2 >= x3)) {
+                median = x2;
+            } else {
+                median = x3;
+            }
+
+            int dist = Math.abs(x1 - median) + Math.abs(x2 - median) + Math.abs(x3 - median);
+
+            
+            System.out.println(dist); 
+        }
+    }
+}
