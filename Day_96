@@ -20,4 +20,16 @@ public class ColorfulStones {
     }
 }
 
+172. Factorial Trailing Zeroes//https://leetcode.com/problems/factorial-trailing-zeroes/?envType=study-plan-v2&envId=top-interview-150
+class Solution {
+    public int trailingZeroes(int n) {
+         int count =0;
+         while(n!=0){
+            n/=5;
+            count +=n;
+         }
+         return count;
+    }
+}
+
 
