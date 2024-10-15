@@ -13,3 +13,40 @@ public class Minimize {
          }
     }
 }
+B. Maximum Multiple Sum// https://codeforces.com/problemset/problem/1985/B
+import java.util.Scanner;
+
+public class MaximumMultipleSum {
+    private static int sumOfMultiples(int x, int n) {
+        int sum = 0;
+        for (int i = x; i <= n; i += x) {
+            sum += i;
+        }
+        return sum;
+    }
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+
+        int t=sc.nextInt();
+
+        for(int i=0;i<t;i++){
+            int n=sc.nextInt();
+            int Max_sum=0;
+            int bestX=2;
+            for (int x = 2; x <= n; x++) {
+                int sum = sumOfMultiples(x, n);
+                
+                
+                if (sum > Max_sum) {
+                    Max_sum = sum;
+                    bestX = x;
+                }
+            }
+            
+           
+            System.out.println(bestX);
+        }
+     }
+ }
+
+
