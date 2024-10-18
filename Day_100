@@ -28,4 +28,40 @@ public class CanISquare {
         
     }
 }
+A. Sasha and Array Coloring// https://codeforces.com/problemset/problem/1843/A
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SashaandArrayColoring {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        
+        while (t-- > 0) {
+           
+            int n = sc.nextInt();
+            int[] a = new int[n];
+            
+           
+            for (int i = 0; i < n; i++) {
+                a[i] = sc.nextInt();
+            }
+            
+            Arrays.sort(a);
+            int totalCost = 0;
+            
+            for (int i = 0; i < n / 2; i++) {
+               
+                int largest = a[n - 1 - i];
+                int smallest = a[i];
+                
+                totalCost += largest - smallest;
+            }
+            
+            
+           
+            System.out.println(totalCost);
+        }
+    }
+}
 
