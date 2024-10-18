@@ -1,1 +1,31 @@
+C. Can I Square?// https://codeforces.com/problemset/problem/1915/C
+import java.util.Scanner;
+
+public class CanISquare {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+       
+        int t = sc.nextInt();
+        
+       
+        for (int i = 0; i < t; i++) {
+            int n = sc.nextInt();  
+            long count = 0;  
+            
+           
+            for (int j = 0; j < n; j++) {
+                count += sc.nextLong();  
+            }
+            
+            long root = (long) Math.sqrt(count);
+            if (root * root == count) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+        
+    }
+}
 
